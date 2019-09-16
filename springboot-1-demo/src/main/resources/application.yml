@@ -1,0 +1,18 @@
+#设定环境模式
+spring:  profiles:    active: test
+    
+--- #表示环境的分割
+spring:  profiles: prod #表示生产环境
+#服务器具体配置信息
+server:
+  port: 81       #端口号
+  servlet:    context-path: / #标识启动路径
+
+--- #表示环境的分割
+spring:
+  profiles: test #表示测试环境
+#服务器具体配置信息
+server:
+  port: 8090
+  servlet:
+    context-path: /jt #标识启动路径
